@@ -1,0 +1,385 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F877A ]
+[d frameptr 0 ]
+"10 C:\Users\USER\MPLABXProjects/lib\7seg.h
+[v _disp_cc disp_cc `(uc  1 e 1 0 ]
+"10 C:\Users\USER\MPLABXProjects/lib\eeprom.h
+[v _delay delay `(v  1 e 1 0 ]
+"14
+[v _data_init data_init `(v  1 e 1 0 ]
+"20
+[v _data_read data_read `(uc  1 e 1 0 ]
+"28
+[v _data_write data_write `(v  1 e 1 0 ]
+"49
+[v _cont_data_read cont_data_read `(v  1 e 1 0 ]
+"58
+[v _cont_data_write cont_data_write `(v  1 e 1 0 ]
+"68
+[v _data_clear data_clear `(v  1 e 1 0 ]
+"33 C:\Users\USER\MPLABXProjects\Alarm_Clock.X\alarm.c
+[v _disp_dig disp_dig `(v  1 e 1 0 ]
+"41
+[v _disp disp `(v  1 e 1 0 ]
+"71
+[v _real_time_counter real_time_counter `(v  1 e 1 0 ]
+"96
+[v _buzz buzz `(v  1 e 1 0 ]
+"109
+[v _set_time set_time `(uc  1 e 1 0 ]
+"223
+[v _alarm_init alarm_init `(v  1 e 1 0 ]
+"252
+[v _disp_alarm_no disp_alarm_no `(v  1 e 1 0 ]
+"264
+[v _disp_alarm_state disp_alarm_state `(v  1 e 1 0 ]
+"287
+[v _disp_alarm disp_alarm `(v  1 e 1 0 ]
+"294
+[v _main main `(v  1 e 1 0 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+"10 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"15 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\pic\__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"26 C:\Users\USER\MPLABXProjects\Alarm_Clock.X\alarm.c
+[v _alarm_h alarm_h `uc  1 e 1 0 ]
+[v _alarm_m alarm_m `uc  1 e 1 0 ]
+[v _alarm_no alarm_no `uc  1 e 1 0 ]
+[v _hr hr `uc  1 e 1 0 ]
+[v _min min `uc  1 e 1 0 ]
+[v _sec sec `uc  1 e 1 0 ]
+[v _al_state al_state `uc  1 e 1 0 ]
+[v _snz_state snz_state `uc  1 e 1 0 ]
+[v _sec_count sec_count `uc  1 e 1 0 ]
+"27
+[v _alarm alarm `[3]uc  1 e 3 0 ]
+[v _time time `[2]uc  1 e 2 0 ]
+"28
+[v _alarms alarms `[4]i  1 e 8 0 ]
+[v _snz snz `[4]i  1 e 8 0 ]
+"166 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h
+[v _PORTA PORTA `VEuc  1 e 1 @5 ]
+"216
+[v _PORTB PORTB `VEuc  1 e 1 @6 ]
+"278
+[v _PORTC PORTC `VEuc  1 e 1 @7 ]
+"340
+[v _PORTD PORTD `VEuc  1 e 1 @8 ]
+"402
+[v _PORTE PORTE `VEuc  1 e 1 @9 ]
+[s S66 . 1 `uc 1 RBIF 1 0 :1:0 
+`uc 1 INTF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 RBIE 1 0 :1:3 
+`uc 1 INTE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"477
+[s S75 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 T0IE 1 0 :1:5 
+]
+[u S80 . 1 `S66 1 . 1 0 `S75 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES80  1 e 1 @11 ]
+[s S28 . 1 `uc 1 CCP2IF 1 0 :1:0 
+`uc 1 . 1 0 :2:1 
+`uc 1 BCLIF 1 0 :1:3 
+`uc 1 EEIF 1 0 :1:4 
+`uc 1 . 1 0 :1:5 
+`uc 1 CMIF 1 0 :1:6 
+]
+"609
+[u S35 . 1 `S28 1 . 1 0 ]
+[v _PIR2bits PIR2bits `VES35  1 e 1 @13 ]
+"634
+[v _TMR1 TMR1 `VEus  1 e 2 @14 ]
+"655
+[v _T1CON T1CON `VEuc  1 e 1 @16 ]
+"1325
+[v _TRISA TRISA `VEuc  1 e 1 @133 ]
+"1375
+[v _TRISB TRISB `VEuc  1 e 1 @134 ]
+"1437
+[v _TRISC TRISC `VEuc  1 e 1 @135 ]
+"1499
+[v _TRISD TRISD `VEuc  1 e 1 @136 ]
+"1561
+[v _TRISE TRISE `VEuc  1 e 1 @137 ]
+"2288
+[v _EEDATA EEDATA `VEuc  1 e 1 @268 ]
+"2295
+[v _EEADR EEADR `VEuc  1 e 1 @269 ]
+[s S45 . 1 `uc 1 RD 1 0 :1:0 
+`uc 1 WR 1 0 :1:1 
+`uc 1 WREN 1 0 :1:2 
+`uc 1 WRERR 1 0 :1:3 
+`uc 1 . 1 0 :3:4 
+`uc 1 EEPGD 1 0 :1:7 
+]
+"2331
+[u S52 . 1 `S45 1 . 1 0 ]
+[v _EECON1bits EECON1bits `VES52  1 e 1 @396 ]
+"2361
+[v _EECON2 EECON2 `VEuc  1 e 1 @397 ]
+"2557
+[v _EEIF EEIF `VEb  1 e 0 @108 ]
+"2569
+[v _GIE GIE `VEb  1 e 0 @95 ]
+"2704
+[v _RC0 RC0 `VEb  1 e 0 @56 ]
+"2707
+[v _RC1 RC1 `VEb  1 e 0 @57 ]
+"2710
+[v _RC2 RC2 `VEb  1 e 0 @58 ]
+"2713
+[v _RC3 RC3 `VEb  1 e 0 @59 ]
+"2716
+[v _RC4 RC4 `VEb  1 e 0 @60 ]
+"2719
+[v _RC5 RC5 `VEb  1 e 0 @61 ]
+"2893
+[v _TMR1ON TMR1ON `VEb  1 e 0 @128 ]
+"294 C:\Users\USER\MPLABXProjects\Alarm_Clock.X\alarm.c
+[v _main main `(v  1 e 1 0 ]
+{
+"358
+[v main@j_240 j `uc  1 a 1 34 ]
+"355
+[v main@j_239 j `uc  1 a 1 33 ]
+"349
+[v main@j_238 j `uc  1 a 1 32 ]
+"346
+[v main@j j `uc  1 a 1 31 ]
+"463
+[v main@j_243 j `uc  1 a 1 35 ]
+"344
+[v main@i i `uc  1 a 1 36 ]
+"428
+[v main@pre_al_state pre_al_state `uc  1 a 1 30 ]
+"333
+[v main@time_sum time_sum `i  1 a 2 37 ]
+"334
+[v main@pre_al_no pre_al_no `uc  1 a 1 29 ]
+"519
+} 0
+"109
+[v _set_time set_time `(uc  1 e 1 0 ]
+{
+[v set_time@arr arr `*.4uc  1 a 1 wreg ]
+"174
+[v set_time@j_210 j `uc  1 a 1 18 ]
+"152
+[v set_time@j_208 j `uc  1 a 1 16 ]
+"190
+[v set_time@j_211 j `uc  1 a 1 14 ]
+"164
+[v set_time@j_209 j `uc  1 a 1 17 ]
+"143
+[v set_time@j_207 j `uc  1 a 1 15 ]
+"119
+[v set_time@k_205 k `uc  1 a 1 13 ]
+"112
+[v set_time@k k `uc  1 a 1 12 ]
+"111
+[v set_time@j j `uc  1 a 1 11 ]
+"109
+[v set_time@arr arr `*.4uc  1 a 1 wreg ]
+[v set_time@i i `uc  1 p 1 8 ]
+[v set_time@arr arr `*.4uc  1 a 1 19 ]
+"210
+} 0
+"96
+[v _buzz buzz `(v  1 e 1 0 ]
+{
+[v buzz@t1 t1 `uc  1 a 1 wreg ]
+"99
+[v buzz@j j `uc  1 a 1 7 ]
+"96
+[v buzz@t1 t1 `uc  1 a 1 wreg ]
+[v buzz@t2 t2 `uc  1 p 1 4 ]
+[v buzz@t1 t1 `uc  1 a 1 6 ]
+"105
+} 0
+"41
+[v _disp disp `(v  1 e 1 0 ]
+{
+[v disp@_1 _1 `uc  1 a 1 wreg ]
+[v disp@_1 _1 `uc  1 a 1 wreg ]
+[v disp@_2 _2 `uc  1 p 1 13 ]
+[v disp@_1 _1 `uc  1 a 1 3 ]
+"46
+} 0
+"5 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+{
+"10
+[v ___awmod@sign sign `uc  1 a 1 6 ]
+[v ___awmod@counter counter `uc  1 a 1 5 ]
+"5
+[v ___awmod@divisor divisor `i  1 p 2 0 ]
+[v ___awmod@dividend dividend `i  1 p 2 2 ]
+"34
+} 0
+"5 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+{
+"10
+[v ___awdiv@quotient quotient `i  1 a 2 7 ]
+"11
+[v ___awdiv@sign sign `uc  1 a 1 6 ]
+[v ___awdiv@counter counter `uc  1 a 1 5 ]
+"5
+[v ___awdiv@divisor divisor `i  1 p 2 0 ]
+[v ___awdiv@dividend dividend `i  1 p 2 2 ]
+"41
+} 0
+"287 C:\Users\USER\MPLABXProjects\Alarm_Clock.X\alarm.c
+[v _disp_alarm disp_alarm `(v  1 e 1 0 ]
+{
+"290
+} 0
+"264
+[v _disp_alarm_state disp_alarm_state `(v  1 e 1 0 ]
+{
+"276
+[v disp_alarm_state@i_222 i `uc  1 a 1 1 ]
+"267
+[v disp_alarm_state@i i `uc  1 a 1 0 ]
+"285
+} 0
+"252
+[v _disp_alarm_no disp_alarm_no `(v  1 e 1 0 ]
+{
+"254
+[v disp_alarm_no@i i `uc  1 a 1 0 ]
+"262
+} 0
+"71
+[v _real_time_counter real_time_counter `(v  1 e 1 0 ]
+{
+"92
+} 0
+"33
+[v _disp_dig disp_dig `(v  1 e 1 0 ]
+{
+[v disp_dig@n n `uc  1 a 1 wreg ]
+[v disp_dig@n n `uc  1 a 1 wreg ]
+[v disp_dig@dig dig `uc  1 p 1 9 ]
+[v disp_dig@n n `uc  1 a 1 12 ]
+"37
+} 0
+"10 C:\Users\USER\MPLABXProjects/lib\7seg.h
+[v _disp_cc disp_cc `(uc  1 e 1 0 ]
+{
+[v disp_cc@digit digit `uc  1 a 1 wreg ]
+"11
+[v disp_cc@PORT PORT `uc  1 a 1 3 ]
+"10
+[v disp_cc@digit digit `uc  1 a 1 wreg ]
+[v disp_cc@digit digit `uc  1 a 1 2 ]
+"51
+} 0
+"14 C:\Users\USER\MPLABXProjects/lib\eeprom.h
+[v _data_init data_init `(v  1 e 1 0 ]
+{
+"18
+} 0
+"68
+[v _data_clear data_clear `(v  1 e 1 0 ]
+{
+[v data_clear@start start `uc  1 a 1 wreg ]
+"69
+[v data_clear@addr addr `uc  1 a 1 8 ]
+"68
+[v data_clear@start start `uc  1 a 1 wreg ]
+[v data_clear@end end `uc  1 p 1 5 ]
+"70
+[v data_clear@start start `uc  1 a 1 7 ]
+"78
+} 0
+"223 C:\Users\USER\MPLABXProjects\Alarm_Clock.X\alarm.c
+[v _alarm_init alarm_init `(v  1 e 1 0 ]
+{
+"247
+[v alarm_init@i i `uc  1 a 1 12 ]
+"250
+} 0
+"58 C:\Users\USER\MPLABXProjects/lib\eeprom.h
+[v _cont_data_write cont_data_write `(v  1 e 1 0 ]
+{
+[v cont_data_write@start start `uc  1 a 1 wreg ]
+"59
+[v cont_data_write@i i `uc  1 a 1 11 ]
+[v cont_data_write@len len `uc  1 a 1 10 ]
+"58
+[v cont_data_write@start start `uc  1 a 1 wreg ]
+[v cont_data_write@arr arr `*.4uc  1 p 1 5 ]
+[v cont_data_write@end_char end_char `uc  1 p 1 6 ]
+[v cont_data_write@start start `uc  1 a 1 9 ]
+"66
+} 0
+"28
+[v _data_write data_write `(v  1 e 1 0 ]
+{
+[v data_write@addr addr `uc  1 a 1 wreg ]
+"37
+[v data_write@prev_gie prev_gie `uc  1 a 1 4 ]
+"28
+[v data_write@addr addr `uc  1 a 1 wreg ]
+[v data_write@data data `uc  1 p 1 2 ]
+[v data_write@addr addr `uc  1 a 1 3 ]
+"46
+} 0
+"49
+[v _cont_data_read cont_data_read `(v  1 e 1 0 ]
+{
+[v cont_data_read@data data `*.4uc  1 a 1 wreg ]
+"50
+[v cont_data_read@i i `uc  1 a 1 9 ]
+"49
+[v cont_data_read@data data `*.4uc  1 a 1 wreg ]
+[v cont_data_read@start start `uc  1 p 1 3 ]
+[v cont_data_read@len len `uc  1 p 1 4 ]
+[v cont_data_read@end_char end_char `uc  1 p 1 5 ]
+"51
+[v cont_data_read@data data `*.4uc  1 a 1 8 ]
+"56
+} 0
+"20
+[v _data_read data_read `(uc  1 e 1 0 ]
+{
+[v data_read@addr addr `uc  1 a 1 wreg ]
+[v data_read@addr addr `uc  1 a 1 wreg ]
+[v data_read@addr addr `uc  1 a 1 2 ]
+"26
+} 0
+"10
+[v _delay delay `(v  1 e 1 0 ]
+{
+"12
+} 0
+"15 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+{
+"17
+[v ___wmul@product product `ui  1 a 2 4 ]
+"15
+[v ___wmul@multiplier multiplier `ui  1 p 2 0 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
+"53
+} 0
