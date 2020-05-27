@@ -5,11 +5,11 @@ A normal clock with alarm features.
 
 - *src* contains the source code and libraries. It contains:
   - *Alarm_Clock.X* -> An **MPLABX IDE** 5.3 Project Folder.
-  - *lib* -> Contains self-written C libraries (.h files) from which some functions are used with he man program.
-    - 7-seg.h -> functions for 7-segment display.
-    - eeprom.h -> functions to utilize PIC EEPROM.
+  - *lib* -> Contains self-written C libraries (.h files) from which some functions are used within the main program.
+    - *7-seg.h* -> functions for 7-segment display.
+    - *eeprom.h* -> functions to utilize PIC EEPROM.
 
-- *schematics* contains a Proteus **8.9** Project file containing schematics for the project.
+- *schematics* contains a Proteus **8.9** Project file containing schematics for the project and screenshot of it.
 
 ## Project Description
 
